@@ -1,0 +1,396 @@
+Fail to get yarn configuration. node:events:306
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at errorOrDestroy (node:internal/streams/destroy:251:7)
+    at node:internal/fs/streams:193:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:550:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+[I 2022-08-05 08:44:49.806 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-08-05 08:44:49.806 ServerApp] jupytext | extension was successfully linked.
+[I 2022-08-05 08:44:49.819 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-08-05 08:44:50.115 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:44:50.115 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-08-05 08:44:50.129 ServerApp] nbdime | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:44:50.129 ServerApp] nbdime | extension was successfully linked.
+[I 2022-08-05 08:44:50.129 ServerApp] notebook_shim | extension was successfully linked.
+Traceback (most recent call last):
+  File "/home/msivanes/miniconda3/bin/jupyter-lab", line 8, in <module>
+    sys.exit(main())
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 592, in launch_instance
+    serverapp = cls.initialize_server(argv=args)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 565, in initialize_server
+    find_extensions=find_extensions,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 87, in inner
+    return method(app, *args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 2415, in initialize
+    self.init_configurables()
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 1824, in init_configurables
+    log=self.log,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 104, in __init__
+    self.config = config
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 604, in __set__
+    self.set(obj, value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 593, in set
+    obj._notify_trait(self.name, old_value, new_value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1222, in _notify_trait
+    type='change',
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1227, in notify_change
+    return self._notify_observers(change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1264, in _notify_observers
+    c(event)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 888, in compatible_observer
+    return func(self, change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 208, in _config_changed
+    self._load_config(change.new, traits=traits, section_names=section_names)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 190, in _load_config
+    warn(msg)
+  File "/home/msivanes/miniconda3/lib/python3.7/contextlib.py", line 119, in __exit__
+    next(self.gen)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1191, in hold_trait_notifications
+    value = trait._cross_validate(self, getattr(self, name))
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 618, in _cross_validate
+    value = obj._trait_validators[self.name](obj, proposal)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 975, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 132, in _validate_pre_save_hook
+    f"Overriding existing pre_save_hook ({self.pre_save_hook.__name__}) with a new one ({value.__name__}).",
+AttributeError: 'str' object has no attribute '__name__'
+Fail to get yarn configuration. node:events:306
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at errorOrDestroy (node:internal/streams/destroy:251:7)
+    at node:internal/fs/streams:193:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:550:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+[I 2022-08-05 08:45:45.951 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-08-05 08:45:45.951 ServerApp] jupytext | extension was successfully linked.
+[I 2022-08-05 08:45:45.964 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-08-05 08:45:46.252 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:45:46.252 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-08-05 08:45:46.264 ServerApp] nbdime | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:45:46.264 ServerApp] nbdime | extension was successfully linked.
+[I 2022-08-05 08:45:46.264 ServerApp] notebook_shim | extension was successfully linked.
+Traceback (most recent call last):
+  File "/home/msivanes/miniconda3/bin/jupyter-lab", line 8, in <module>
+    sys.exit(main())
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 592, in launch_instance
+    serverapp = cls.initialize_server(argv=args)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 565, in initialize_server
+    find_extensions=find_extensions,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 87, in inner
+    return method(app, *args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 2415, in initialize
+    self.init_configurables()
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 1824, in init_configurables
+    log=self.log,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 104, in __init__
+    self.config = config
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 604, in __set__
+    self.set(obj, value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 593, in set
+    obj._notify_trait(self.name, old_value, new_value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1222, in _notify_trait
+    type='change',
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1227, in notify_change
+    return self._notify_observers(change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1264, in _notify_observers
+    c(event)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 888, in compatible_observer
+    return func(self, change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 208, in _config_changed
+    self._load_config(change.new, traits=traits, section_names=section_names)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 190, in _load_config
+    warn(msg)
+  File "/home/msivanes/miniconda3/lib/python3.7/contextlib.py", line 119, in __exit__
+    next(self.gen)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1191, in hold_trait_notifications
+    value = trait._cross_validate(self, getattr(self, name))
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 618, in _cross_validate
+    value = obj._trait_validators[self.name](obj, proposal)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 975, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 132, in _validate_pre_save_hook
+    f"Overriding existing pre_save_hook ({self.pre_save_hook.__name__}) with a new one ({value.__name__}).",
+AttributeError: 'str' object has no attribute '__name__'
+Fail to get yarn configuration. node:events:306
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at errorOrDestroy (node:internal/streams/destroy:251:7)
+    at node:internal/fs/streams:193:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:550:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+[I 2022-08-05 08:50:26.024 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-08-05 08:50:26.025 ServerApp] jupytext | extension was successfully linked.
+[I 2022-08-05 08:50:26.037 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-08-05 08:50:26.296 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:50:26.297 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-08-05 08:50:26.306 ServerApp] nbdime | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:50:26.306 ServerApp] nbdime | extension was successfully linked.
+[I 2022-08-05 08:50:26.306 ServerApp] notebook_shim | extension was successfully linked.
+Traceback (most recent call last):
+  File "/home/msivanes/miniconda3/bin/jupyter-lab", line 8, in <module>
+    sys.exit(main())
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 592, in launch_instance
+    serverapp = cls.initialize_server(argv=args)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 565, in initialize_server
+    find_extensions=find_extensions,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 88, in inner
+    return method(app, *args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 2415, in initialize
+    self.init_configurables()
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 1824, in init_configurables
+    log=self.log,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 107, in __init__
+    self.config = config
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 606, in __set__
+    self.set(obj, value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 595, in set
+    obj._notify_trait(self.name, old_value, new_value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1224, in _notify_trait
+    type='change',
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1229, in notify_change
+    return self._notify_observers(change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1266, in _notify_observers
+    c(event)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 890, in compatible_observer
+    return func(self, change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 211, in _config_changed
+    self._load_config(change.new, traits=traits, section_names=section_names)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 193, in _load_config
+    warn(msg)
+  File "/home/msivanes/miniconda3/lib/python3.7/contextlib.py", line 119, in __exit__
+    next(self.gen)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1193, in hold_trait_notifications
+    value = trait._cross_validate(self, getattr(self, name))
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 620, in _cross_validate
+    value = obj._trait_validators[self.name](obj, proposal)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 977, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 132, in _validate_pre_save_hook
+    f"Overriding existing pre_save_hook ({self.pre_save_hook.__name__}) with a new one ({value.__name__}).",
+AttributeError: 'str' object has no attribute '__name__'
+Fail to get yarn configuration. node:events:306
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at errorOrDestroy (node:internal/streams/destroy:251:7)
+    at node:internal/fs/streams:193:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:550:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+[I 2022-08-05 08:50:52.342 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-08-05 08:50:52.342 ServerApp] jupytext | extension was successfully linked.
+[I 2022-08-05 08:50:52.356 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-08-05 08:50:52.663 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:50:52.664 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-08-05 08:50:52.673 ServerApp] nbdime | extension was found and enabled by notebook_shim. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:50:52.673 ServerApp] nbdime | extension was successfully linked.
+[I 2022-08-05 08:50:52.673 ServerApp] notebook_shim | extension was successfully linked.
+Traceback (most recent call last):
+  File "/home/msivanes/miniconda3/bin/jupyter-lab", line 8, in <module>
+    sys.exit(main())
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 592, in launch_instance
+    serverapp = cls.initialize_server(argv=args)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/extension/application.py", line 565, in initialize_server
+    find_extensions=find_extensions,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 88, in inner
+    return method(app, *args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 2415, in initialize
+    self.init_configurables()
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/serverapp.py", line 1824, in init_configurables
+    log=self.log,
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 107, in __init__
+    self.config = config
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 606, in __set__
+    self.set(obj, value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 595, in set
+    obj._notify_trait(self.name, old_value, new_value)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1224, in _notify_trait
+    type='change',
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1229, in notify_change
+    return self._notify_observers(change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1266, in _notify_observers
+    c(event)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 890, in compatible_observer
+    return func(self, change)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 211, in _config_changed
+    self._load_config(change.new, traits=traits, section_names=section_names)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/config/configurable.py", line 193, in _load_config
+    warn(msg)
+  File "/home/msivanes/miniconda3/lib/python3.7/contextlib.py", line 119, in __exit__
+    next(self.gen)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 1193, in hold_trait_notifications
+    value = trait._cross_validate(self, getattr(self, name))
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 620, in _cross_validate
+    value = obj._trait_validators[self.name](obj, proposal)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/traitlets/traitlets.py", line 977, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/msivanes/miniconda3/lib/python3.7/site-packages/jupyter_server/services/contents/manager.py", line 132, in _validate_pre_save_hook
+    f"Overriding existing pre_save_hook ({self.pre_save_hook.__name__}) with a new one ({value.__name__}).",
+AttributeError: 'str' object has no attribute '__name__'
+[I 2022-08-05 08:51:53.476 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-08-05 08:51:53.856 ServerApp] jupyter_nbextensions_configurator | extension was found and enabled by nbclassic. Consider moving the extension to Jupyter Server's extension paths.
+[I 2022-08-05 08:51:53.856 ServerApp] jupyter_nbextensions_configurator | extension was successfully linked.
+[I 2022-08-05 08:51:53.856 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-08-05 08:51:54.042 ServerApp] nbclassic | extension was successfully loaded.
+[I 2022-08-05 08:51:54.043 ServerApp] [jupyter_nbextensions_configurator] enabled 0.4.1
+[I 2022-08-05 08:51:54.043 ServerApp] jupyter_nbextensions_configurator | extension was successfully loaded.
+[I 2022-08-05 08:51:54.044 LabApp] JupyterLab extension loaded from /home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab
+[I 2022-08-05 08:51:54.044 LabApp] JupyterLab application directory is /home/msivanes/miniconda3/envs/fastai/share/jupyter/lab
+[I 2022-08-05 08:51:54.049 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2022-08-05 08:51:54.050 ServerApp] Serving notebooks from local directory: /home/msivanes/Code/0Inprogress/nbdev_sandbox
+[I 2022-08-05 08:51:54.050 ServerApp] Jupyter Server 1.11.1 is running at:
+[I 2022-08-05 08:51:54.050 ServerApp] http://localhost:8888/lab?token=48f70399fb064912f64783789aef9acd10b19dcb006010cd
+[I 2022-08-05 08:51:54.050 ServerApp]  or http://127.0.0.1:8888/lab?token=48f70399fb064912f64783789aef9acd10b19dcb006010cd
+[I 2022-08-05 08:51:54.050 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2022-08-05 08:51:54.109 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/msivanes/.local/share/jupyter/runtime/jpserver-484194-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/lab?token=48f70399fb064912f64783789aef9acd10b19dcb006010cd
+     or http://127.0.0.1:8888/lab?token=48f70399fb064912f64783789aef9acd10b19dcb006010cd
+[W 2022-08-05 08:51:59.995 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2022-08-05 08:52:02.802 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:02.809 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:02.830 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:02.838 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.035 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.046 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.060 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.070 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.127 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.128 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.156 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.175 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.237 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.253 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.270 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.288 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.440 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.451 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.472 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:03.484 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[E 2022-08-05 08:52:04.006 ServerApp] Uncaught exception GET /lab/api/extensions?1659669720602 (::1)
+    HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/lab/api/extensions?1659669720602', version='HTTP/1.1', remote_ip='::1')
+    Traceback (most recent call last):
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/web.py", line 1704, in _execute
+        result = await result
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 769, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 252, in get
+        extensions = yield self.manager.list_extensions()
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 769, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 119, in list_extensions
+        pkg_info = yield self._get_pkg_info(name, data)
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 769, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 190, in _get_pkg_info
+        outdated = yield self._get_outdated()
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 769, in run
+        yielded = self.gen.throw(*exc_info)  # type: ignore
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/handlers/extension_manager_handler.py", line 221, in _load_outdated
+        data = yield self.executor.submit(
+      File "/home/msivanes/.local/lib/python3.9/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+        return self.__get_result()
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+        raise self._exception
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/commands.py", line 552, in get_latest_compatible_package_versions
+        return handler.latest_compatible_package_versions(names)
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab/commands.py", line 1809, in latest_compatible_package_versions
+        ret = self._run([which('npm'), 'pack'] + keys, cwd=tempdir)
+      File "/home/msivanes/miniconda3/envs/fastai/lib/python3.9/site-packages/jupyterlab_server/process.py", line 59, in which
+        raise ValueError(msg)
+    ValueError: Please install Node.js and npm before continuing installation. You may be able to install Node.js from your package manager, from conda, or directly from the Node.js website (https://nodejs.org).
+[W 2022-08-05 08:52:04.024 LabApp] Unhandled error
+[E 2022-08-05 08:52:04.026 LabApp] {
+      "Host": "localhost:8888",
+      "Connection": "keep-alive",
+      "Sec-Ch-Ua": "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"",
+      "Authorization": "token 48f70399fb064912f64783789aef9acd10b19dcb006010cd",
+      "X-Xsrftoken": "2|16343692|0269c3dc344381f5837bd30eb08418bf|1659421773",
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Content-Type": "application/json",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+      "Sec-Ch-Ua-Platform": "\"Linux\"",
+      "Accept": "*/*",
+      "Sec-Fetch-Site": "same-origin",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Dest": "empty",
+      "Referer": "http://localhost:8888/lab",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,ta-IN;q=0.8,ta;q=0.7",
+      "Cookie": "auth.strategy=authProvider; auth._token.authProvider=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJydWJyaXgiLCJleHAiOjE2NDMzNzM4MTN9.SzhT4oUfy9IHEi-PGvSK3x_ajz7Q_vmFVcwakCpxFH0; auth._token_expiration.authProvider=1643373813000; auth.currentWorkspace=rubrix; username-localhost-8927=\"2|1:0|10:1658540322|23:username-localhost-8927|44:NDc2MzZiMjgyYzk5NDE1Nzg2MGMzMjBmMzcxMDkzMmQ=|cde8399f67ce87369486f3254ed35b6177be0a6795cae2310e37fc27bd49c70c\"; username-localhost-8918=\"2|1:0|10:1658540332|23:username-localhost-8918|44:NThjYTZmNzQ0MDg3NGUzYWE1MWExMmEzOGYwMWIyNzE=|4b1fdcf1b6f317bc8c00fea8744614f3da2fb476ba1539ef4fd6a4be2ddfc2d0\"; username-localhost-8802=\"2|1:0|10:1658540501|23:username-localhost-8802|44:ZGJjYWVhNWZhOGQ1NDkxNjljMGE2OTI2ZWMwZmUwMTE=|478306aee2992561346887848add3aac752522c0fdfdac0f7f151019aa090f9f\"; _xsrf=2|16343692|0269c3dc344381f5837bd30eb08418bf|1659421773; username-localhost-8889=\"2|1:0|10:1659507979|23:username-localhost-8889|44:YzgzN2ZjZGJlNDQzNDg5ZjlhOTVlZDYxMDdmMjJmZWQ=|8836d1de787c84e0d73fee12a74cab2e94ec72ced49b659865a42255c41d3544\"; username-localhost-8891=\"2|1:0|10:1659596674|23:username-localhost-8891|44:NzFiNWFjNjI2MjhkNDkzZTg3YmE4OGMyNTAyYmVjZWI=|5706d6233761a8c29f4849524b10695b48f31a05807f066f6fcddb1005423a3b\"; username-localhost-8892=\"2|1:0|10:1659596676|23:username-localhost-8892|44:MTc0MGVhM2E4MDEzNDhiNTk0MzAzMTY0ZmM2OGU0YmE=|73c48a572388e86180fa2e56885d24be45a66d2b5e067276601a4796f39fc23d\"; username-localhost-8900=\"2|1:0|10:1659669340|23:username-localhost-8900|44:MDk1YWI3NTE5MTI3NGE1ZDk0ZGIxY2FjOGRhYWE2MzE=|ad0a7506ef7f009e80fb213374abab560998535ce5560c6693f0e8c80aeed980\"; username-localhost-8890=\"2|1:0|10:1659669375|23:username-localhost-8890|44:M2MxZjE0N2JlZTIxNDEyOTlmNDc3MWRmMWZlNDRmZTM=|6a952ee87a1286be2014d2adf636e63e85f926795f5b8b69845c2b4831141928\"; username-localhost-8888=\"2|1:0|10:1659669720|23:username-localhost-8888|44:ODEwNWZjMzlhMjFlNDdlOTgwOWZiMzdlOTI0MGE5MTQ=|6b721ec7b570ec3f5b1f79e9b4226a8ff9030489aa45d5d8b0c2ee6f3be4dddb\""
+    }
+[E 2022-08-05 08:52:04.026 LabApp] 500 GET /lab/api/extensions?1659669720602 (::1) 2929.64ms referer=http://localhost:8888/lab
+[W 2022-08-05 08:52:04.310 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.322 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.333 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.345 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.751 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.786 ServerApp] Config option `template_path` not recognized by `ExporterCollapsibleHeadings`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.880 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.911 ServerApp] Config option `template_path` not recognized by `TocExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.931 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.954 ServerApp] Config option `template_path` not recognized by `LenvsHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:04.979 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:05.004 ServerApp] Config option `template_path` not recognized by `LenvsTocHTMLExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:05.080 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:05.099 ServerApp] Config option `template_path` not recognized by `LenvsLatexExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:05.549 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:05.571 ServerApp] Config option `template_path` not recognized by `LenvsSlidesExporter`.  Did you mean one of: `extra_template_paths, template_name, template_paths`?
+[W 2022-08-05 08:52:13.696 ServerApp] Notebook 00_core.ipynb is not trusted
+[I 2022-08-05 08:52:14.145 ServerApp] Kernel started: ef2503bc-21ff-4b88-82a7-b967462af5aa
+[W 2022-08-05 08:52:18.259 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7fdbbe5c16d0>
+[I 2022-08-05 08:54:13.926 ServerApp] Saving file at /00_core.ipynb
+[I 2022-08-05 08:55:48.502 ServerApp] Saving file at /00_core.ipynb
+[W 2022-08-05 08:55:48.505 ServerApp] Notebook 00_core.ipynb is not trusted
+[W 2022-08-05 08:57:52.321 ServerApp] Notebook index.ipynb is not trusted
+[I 2022-08-05 08:57:52.867 ServerApp] Kernel started: d2dc32f3-9c3f-47f4-b96c-87ce93b4b868
+[I 2022-08-05 08:59:52.978 ServerApp] Saving file at /index.ipynb
+[W 2022-08-05 08:59:52.981 ServerApp] Notebook index.ipynb is not trusted
+[I 2022-08-05 09:01:48.880 ServerApp] Saving file at /00_core.ipynb
+[W 2022-08-05 09:01:48.881 ServerApp] Notebook 00_core.ipynb is not trusted
+[I 2022-08-05 09:03:48.991 ServerApp] Saving file at /00_core.ipynb
+[W 2022-08-05 09:03:48.995 ServerApp] Notebook 00_core.ipynb is not trusted
