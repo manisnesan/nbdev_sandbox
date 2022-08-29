@@ -16,21 +16,19 @@ format:
 
 website:
   title: "nbdev_sandbox"
+  site-url: "https://manisnesan.github.io/nbdev_sandbox/"
   description: "nbdev tutorial step by step"
-  execute: 
-    enabled: false
   twitter-card: true
   open-graph: true
-  reader-mode: true
   repo-branch: main
-  repo-url: https://github.com/manisnesan/nbdev_sandbox/
+  repo-url: "https://github.com/manisnesan/nbdev_sandbox/"
   repo-actions: [issue]
   navbar:
     background: primary
     search: true
     right:
       - icon: github
-        href: https://github.com/manisnesan/nbdev_sandbox/
+        href: "https://github.com/manisnesan/nbdev_sandbox/"
   sidebar:
     style: "floating"
 

@@ -3,3 +3,5 @@ website:
     contents:
       - index.ipynb
       - 00_core.ipynb
+      - 01_git_friendly_jupyter.ipynb
+      - 03_export_test.ipynb
