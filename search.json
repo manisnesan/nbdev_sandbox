@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "api.html",
+    "href": "api.html",
+    "title": "api",
+    "section": "",
+    "text": "Salesforce KCS Search\n\nSearch using title or id\nAs a support associate, I should be able to search using title or id of KCS Resource (Solution/Article) that I know exists and get the respective KCS resource in Salesforce KCS Search Results and ** link the KCS resource to the support case.\ncurl 'https://access.redhat.com/hydra/rest/search/v2/kcs?sso_username=rhn-support-msivanes' -X POST -H 'Accept: application/json' -H 'Accept-Language: en-US,en;q=0.5' -H 'Content-Type: application/json' --data-raw '{\"q\":\"The jobs are failing., ERROR CODE [82:158]: The job is pending because: The remote end has closed network connection unexpectedly\",\"clientName\":\"gss-salesforce\",\"rows\":5,\"expression\":\"fq=(documentKind: Solution) OR (documentKind: Article) OR (documentKind: Cve) OR (documentKind: Errata) OR (documentKind: LabInfo) OR (documentKind: Video) OR (documentKind: Vulnerability) OR (documentKind: CertifiedHardware) OR (documentKind: CertifiedSoftware) OR (documentKind: CertifiedCloudPartner)\"}' | jq '.'\nSearch using title ” Jenkins Build errors after deleting application and recreating it.”\ncurl 'https://access.redhat.com/hydra/rest/search/v2/kcs?sso_username=rhn-support-msivanes' -X POST -H 'Accept: application/json' -H 'Accept-Language: en-US,en;q=0.5' -H 'Content-Type: application/json' --data-raw '{\"q\":\"Jenkins Build errors after deleting application and recreating it. \",\"clientName\":\"gss-salesforce\",\"rows\":5,\"expression\":\"fl=allTitle,score&fq=(documentKind: Solution) OR (documentKind: Article) OR (documentKind: Cve) OR (documentKind: Errata) OR (documentKind: LabInfo) OR (documentKind: Video) OR (documentKind: Vulnerability) OR (documentKind: CertifiedHardware) OR (documentKind: CertifiedSoftware) OR (documentKind: CertifiedCloudPartner)\"}' | jq '.'\nSearch using id 540413\ncurl 'https://access.redhat.com/hydra/rest/search/v2/kcs?sso_username=rhn-support-msivanes' -X POST -H 'Accept: application/json' -H 'Accept-Language: en-US,en;q=0.5' -H 'Content-Type: application/json' --data-raw '{\"q\":\"540413\",\"clientName\":\"gss-salesforce\",\"rows\":5,\"expression\":\"fl=id,allTitle,score&fq=(documentKind: Solution) OR (documentKind: Article) OR (documentKind: Cve) OR (documentKind: Errata) OR (documentKind: LabInfo) OR (documentKind: Video) OR (documentKind: Vulnerability) OR (documentKind: CertifiedHardware) OR (documentKind: CertifiedSoftware) OR (documentKind: CertifiedCloudPartner)\"}' | jq '.'\n\nsource\n\n\nsf_kcssearch\n\n sf_kcssearch (query:str='540413')\n\n\ntest_eq(sf_kcssearch('540413')['response']['docs'][0]['id'] == '540413', True)\n\n\nexpected='Jenkins Build errors after deleting application and recreating it.'\ntest_eq(sf_kcssearch(expected)['response']['docs'][0]['allTitle'], 'Jenkins Build errors after deleting application and recreating it.')"
+  },
+  {
+    "objectID": "01_git_friendly_jupyter.html",
+    "href": "01_git_friendly_jupyter.html",
+    "title": "Git-friendly Jupyter",
+    "section": "",
+    "text": "Version control is essential to developing software, yet Jupyer notebooks don’t work with version control by default. nbdev solves this problem! It provides a set of hooks which enable git-friendly Jupyter notebooks in any git repo, including those that don’t use the broader nbdev system.\nTo get started, install nbdev:\nthen install hooks:\nThat’s it! Read on if you’re stuck or if you’d like to learn more about nbdev hooks and how to customise them."
+  },
+  {
+    "objectID": "01_git_friendly_jupyter.html#quickstart-install-nbdev-hooks-for-a-repo",
+    "href": "01_git_friendly_jupyter.html#quickstart-install-nbdev-hooks-for-a-repo",
+    "title": "Git-friendly Jupyter",
+    "section": "Quickstart: Install nbdev hooks for a repo",
+    "text": "Quickstart: Install nbdev hooks for a repo\nTo start with, change directory to your current project and double-check. Don’t worry about the strange path, that’s because we’re using a temporary directory for this tutorial:\n\n!pwd\n\n/tmp/tmpr5g3lfxn/repo\n\n\nInstall nbdev:\n\n!pip install -Uqq nbdev\n\nInstall nbdev hooks:\n\n!nbdev_install_hooks\n\nNot in a git repository, git hooks cannot be installed.\n\n\nYou’ll see the above error if you’re not in a git repo. If so, initialise a git repository:\n\n!git init\n\nInitialized empty Git repository in /tmp/tmpr5g3lfxn/repo/.git/\n\n\nThen try installing nbdev hooks again:\n\n!nbdev_install_hooks\n\nHooks are installed.\n\n\nIf you already have a pre-save hook set in your Jupyter config file we won’t be able to safely install a new one automatically. Instead, you’ll encounter an error and will need to follow its instructions for a manual installation.\nJupyter hooks will now be installed in your user’s Jupyter config directory, and will work for all repos by default. Git hooks will only be installed in the current repo; you will need to rerun nbdev_install_hooks for each of your git repos. See Configuring nbdev hooks if you’d like to customise hook behaviour, for example, to opt out of hooks in certain repos."
+  },
+  {
+    "objectID": "01_git_friendly_jupyter.html#what-are-nbdev-hooks",
+    "href": "01_git_friendly_jupyter.html#what-are-nbdev-hooks",
+    "title": "Git-friendly Jupyter",
+    "section": "What are nbdev hooks?",
+    "text": "What are nbdev hooks?\nnbdev provides three hooks to ease Jupyter-git integration.\n\nnbdev_merge on merging notebooks with git\nOne of the biggest complaints when working with Jupyter is that merge conflicts break notebooks. This is particularly problematic in projects with many collaborators.\n\n\n\nJupyter notebook shows the above error when opening a notebook with merge conflicts.\n\n\nOftentimes these conflicts are on metadata like cell execution counts that we don’t really care about. nbdev comes with a custom git merge driver that automatically fixes conflicting outputs and metadata, and that leaves remaining conflicts in a state that still works with Jupyter. It works in all git commands that use merge under the hood, including merge, pull, rebase, and stash.\nHere’s what the conflict looks like in Jupyter with nbdev’s merge driver:\n\n\n\n\n\n\n\nnbdev_clean on saving notebooks in Jupyter\nJupyter notebooks store a variety of metadata (including execution counts and notebook extension info) that aren’t conducive to collaborative version control systems like git. These pollute diffs in pull requests and git histories (which can make debugging harder), and tend to cause merge conflicts. For example:\n  {\n   \"cell_type\": \"code\",\n-  \"execution_count\": 1,\n+  \"execution_count\": 2,\n   \"metadata\": {\n     \"hide_input\": false\n  }\nPython’s default repr is another example, since it includes a memory address which we usually aren’t interested in:\n-<matplotlib.axes._subplots.AxesSubplot at 0x7fbc11508950>\n+<matplotlib.axes._subplots.AxesSubplot at 0x7fbc113dbe90>\nnbdev install a Jupyter hook which runs nbdev_clean to automatically clean unwanted metadata and outputs from your notebooks, including ids from default Python reprs! With nbdev hooks, the examples above would become:\n{\n  \"cell_type\": \"code\",\n  \"execution_count\": null,\n  \"metadata\": {}\n}\nand\n<matplotlib.axes._subplots.AxesSubplot>\n\n\nnbdev_trust after merging notebooks with git\nA side-effect of Jupyter’s security model is that widgets don’t work in collaborative repos, unless you manually “trust” notebooks after each git pull. There is a good reason behind this: since Jupyter notebooks contain HTML and JavaScript, the trust system avoids running malicious code when you open a notebook and don’t explicitly run any cells. See the official documentation for more.\nManually trusting notebooks each time is a pain. A more natural workflow would be trust a repo once-off, and all notebooks and changes thereafter. nbdev includes a git post-merge hook which runs nbdev_trust in your repo to do exactly this."
+  },
+  {
+    "objectID": "01_git_friendly_jupyter.html#configuring-nbdev-hooks",
+    "href": "01_git_friendly_jupyter.html#configuring-nbdev-hooks",
+    "title": "Git-friendly Jupyter",
+    "section": "Configuring nbdev hooks",
+    "text": "Configuring nbdev hooks\nThe most up-to-date reference of nbdev’s settings is in the nbdev_create_config docs. In addition, this section will guide you through a few common configurations.\nControl whether Jupyter hooks are run:\n\nGlobally enable Jupyter hooks: set jupyter_hooks = True in user settings\nGlobally disable Jupyter hooks: set jupyter_hooks = False in user settings (at ~/.config/nbdev/settings.ini)\nEnable Jupyter hooks only for selected repos: set jupyter_hooks = False in user settings and jupyter_hooks = True in selected repo settings\n\nCustomise notebook cleaning with the following settings:\n\nClean all outputs and metadata: clear_all\nPreserve certain metadata by key: allowed_metadata_keys and allowed_cell_metadata_keys\nClean ids from default Python reprs: clean_ids\n\nAll of the above can be customised per-user and per-repo.\nControl whether git hooks are run:\nSince git hooks are installed per-repo they’ll only run in repos where you manually nbdev_install_hooks. If you change your mind later, you can uninstall git hooks by following the instructions in the .gitconfig file created in your repo."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_sandbox",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_sandbox",
+    "section": "Install",
+    "text": "Install\npip install nbdev_sandbox"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_sandbox",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "exp_test.html",
+    "href": "exp_test.html",
+    "title": "Export tests Proof-of-Concept",
+    "section": "",
+    "text": "We use #|import to describe test-specific imports that should be used that aren’t included in the exported modules, such as fastcore.test.\n\nsource\n\naddition\n\n addition (a, b)\n\n\ntest_eq(addition(1,2), 3)\ntest_eq(addition(-1,0), -1)\n\nTests are defined as #|test {testname} when declared in the pytest-enabled framework.\nBelow is a mockup of what the exported test class should then look like:\n\nimport unittest\n\nclass CoreTest(unittest.TestCase):\n    def test_addition(self):\n        test_eq(addition(1,2), 3)\n        test_eq(addition(-1,0), -1)\n\n\ndef run_case(testcase:unittest.TestCase):\n    \"Runs a unittest.TestCase\"\n    suite = unittest.defaultTestLoader.loadTestsFromTestCase(testcase)\n    unittest.TextTestRunner().run(suite)\n\n\nrun_case(CoreTest)\n\n.\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "nbdev_sandbox",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()\n\n\nsource\n\n\nsay_hello\n\n say_hello (to)\n\nSay hello to somebody\n\nsay_hello('Mani')\n\n'Hello Mani!'\n\n\n\nfrom IPython.display import display, SVG\n\n\ndisplay(SVG('<svg height=\"100\"><circle cx=\"50\" cy=\"50\" r=\"40\"/></svg>'))\n\n\n\n\n\nassert say_hello('Mani') == 'Hello Mani!'\n\n\nsource\n\n\nHelloSayer\n\n HelloSayer (to)\n\nSay hello to using say_hello\n\nsource\n\n\nHelloSayer.say\n\n HelloSayer.say ()\n\nDo the saying\n\no = HelloSayer(\"Alexis\")\no.say()\n\n'Hello Alexis!'\n\n\nSteps I followed\n\nBuild the library nbdev_export : builds the .py modules & library from jupyter nb\nEditable install of library & latest version of Quarto nbdev_install\nAdd Documentation by editing index.ipynb to create docs home page & README.md\nPreview the docs nbdev_preview\nSet up autoreload\nFaced an issue with nbdev_export when using in-notebook export cell\n\n\nimport nbdev\n\n\nnbdev.merge?\n\nObject `nbdev.merge` not found."
+  }
+]
